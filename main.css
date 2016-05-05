@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ebebeb;
+  height: 100vh;
+  font-family: 'Open Sans Condensed';
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.weather-container {
+  width: 350px;
+  height: 350px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 1px 10px 1px #cccccc;
+}
+
+.weather-info {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.weather-info::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.weather-unit {
+  position: absolute;
+  right: 30px;
+  bottom: 80px;
+  font-size: 60px;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.weather-temperature {
+  position: relative;
+  font-size: 120px;
+  font-family: 'Fjalla One';
+  color: white;
+  z-index: 2;
+  text-shadow: 1px 1px 10px #333333;
+}
+
+.weather-temperature::after {
+  content: "°";
+  font-size: 80px;
+  position: absolute;
+}
+
+.location {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 20px;
+  font-family: 'Fjalla One';
+}
+
+.state {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+  font-size: 25px;
+  font-style: italic;
+}
